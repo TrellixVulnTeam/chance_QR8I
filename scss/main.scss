@@ -54,6 +54,7 @@ img {
     letter-spacing: 0.2rem;
     font-family: "Irish Grover", sans-serif;
     font-size: 2rem;
+    text-decoration: none;
   }
 
   a {
@@ -63,14 +64,15 @@ img {
     letter-spacing: 0.2rem;
     font-family: "Irish Grover", sans-serif;
     font-size: 1.25rem;
+    text-decoration: none;
   }
 
   ul {
     display: flex;
   }
 
-  a:hover {
-    border-bottom: $primary-color 2px solid;
+  .navbar__list a:hover {
+    border-bottom: $primary 2px solid;
   }
 
   h2 {
@@ -86,6 +88,7 @@ img {
     align-items: center;
     justify-content: center;
     width: 6rem;
+    cursor: pointer;
   }
 
   .navbar__logo {

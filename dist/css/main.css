@@ -45,17 +45,19 @@ img {
     margin-left: 95%;
     letter-spacing: 0.2rem;
     font-family: "Irish Grover", sans-serif;
-    font-size: 2rem; }
+    font-size: 2rem;
+    text-decoration: none; }
   .navbar a {
     color: #fff;
     padding: 1rem 2rem;
     margin: 0 0.5rem;
     letter-spacing: 0.2rem;
     font-family: "Irish Grover", sans-serif;
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    text-decoration: none; }
   .navbar ul {
     display: flex; }
-  .navbar a:hover {
+  .navbar .navbar__list a:hover {
     border-bottom: #7dcea0 2px solid; }
   .navbar h2 {
     width: 7rem; }
@@ -65,7 +67,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 6rem; }
+    width: 6rem;
+    cursor: pointer; }
   .navbar .navbar__logo {
     font-weight: 400;
     margin-left: 95%; }

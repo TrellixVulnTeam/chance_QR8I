@@ -1,0 +1,24 @@
+{
+  "name": "piggybanker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WNortier/Piggybanker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WNortier/Piggybanker/issues"
+  },
+  "homepage": "https://github.com/WNortier/Piggybanker#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

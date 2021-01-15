@@ -8,7 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log(document);
 
-  playPause();
+  document.addEventListener("scroll", () => {
+    myVideo.play();
+  });
+
   window.addEventListener("resize", () => {
     console.log(window.innerWidth);
     if (window.innerWidth <= 500) {

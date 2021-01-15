@@ -1,40 +1,6 @@
 @import "variables";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-  background: #fff;
-  color: #333;
-  line-height: 1.6;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  color: #333;
-  text-decoration: none;
-}
-
-h1,
-h2 {
-  font-weight: 300;
-  line-height: 1.2;
-}
-
-p {
-  margin: 1rem 0;
-}
-img {
-  width: 100%;
-}
 
 .navbar {
   display: flex;
@@ -49,30 +15,8 @@ img {
   top: 0;
   padding: 0 3rem;
 
-  .navbar__brand a {
-    margin-left: 95%;
-    letter-spacing: 0.2rem;
-    font-family: "Irish Grover", sans-serif;
-    font-size: 2rem;
-    text-decoration: none;
-  }
-
-  a {
-    color: #fff;
-    padding: 1rem 2rem;
-    margin: 0 0.5rem;
-    letter-spacing: 0.2rem;
-    font-family: "Irish Grover", sans-serif;
-    font-size: 1.25rem;
-    text-decoration: none;
-  }
-
   ul {
     display: flex;
-  }
-
-  .navbar__list a:hover {
-    border-bottom: $primary 2px solid;
   }
 
   h2 {
@@ -83,7 +27,30 @@ img {
     cursor: pointer;
   }
 
-  .navbar__logo-container {
+  &__brand a {
+    margin-left: 150%;
+    letter-spacing: 0.2rem;
+    font-family: "Irish Grover", sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__list a {
+    color: #fff;
+    padding: 1rem 2rem;
+    margin: 0 0.5rem;
+    letter-spacing: 0.2rem;
+    font-family: "Irish Grover", sans-serif;
+    font-size: 1.25rem;
+    text-decoration: none;
+  }
+
+  &__list a:hover {
+    border-bottom: $secondary-color 2px solid;
+  }
+
+  &__logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,9 +58,19 @@ img {
     cursor: pointer;
   }
 
-  .navbar__logo {
+  &__logo {
     font-weight: 400;
-    margin-left: 95%;
+    margin-left: 220%;
+  }
+
+  #logo {
+    animation: spin 20s linear infinite;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
 
@@ -103,6 +80,7 @@ img {
   height: 100vh;
   position: relative;
   color: #fff;
+  overflow: hidden;
 }
 
 .hero .content {
@@ -113,9 +91,7 @@ img {
   text-align: center;
   height: 100%;
   padding: 0 20px;
-}
 
-.hero .content {
   h1 {
     font-size: 5rem;
     font-family: "Irish Grover", sans-serif;
@@ -125,5 +101,63 @@ img {
     font-size: 2rem;
     max-width: 60rem;
     margin: 2rem 0 3rem;
+  }
+
+  .hero__btn:link,
+  .hero__btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    /* Y AXIS 15PX padding AND X AXIS 40px padding  */
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    animation-fill-mode: backwards;
+  }
+
+  .hero__btn:hover {
+    /* Y AXIS WORKS FROM THE TOP TO THE BOTTOM SO TO GO UP IT HAS TO BE NEGATIVE */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .hero__btn:active {
+    transform: translateY(-1px);
+  }
+
+  .btn-white {
+    background-color: $secondary-color;
+    color: #777;
+  }
+
+  // ADDING THE SPLASH EFFECT
+
+  .hero__btn::after {
+    /* content MUST ALWAYS BE SET */
+    content: "";
+    /* SINCE THE PARENT IS inline-block ALSO */
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    /* absolute POSITIONING ON THE CHILD */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* KEEPS THE BUTTON BEHIND BUT THE SPLASH EFFECT WILL APPEAR ON THE SIDES */
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  /*SET THE btn COLOR FOR THE ::after PSEUDO ELEMENT*/
+  .btn-white::after {
+    background-color: $secondary-color;
+  }
+
+  .hero__btn:hover::after {
+    /* scale() DOUBLES THE SIZE IT WAS BEFORE */
+    transform: scale(1.5);
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
   }
 }

@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #d7dbdd;
+  color: #333;
+  line-height: 1.6; }
+  body ul {
+    list-style: none; }
+  body a {
+    color: #333;
+    text-decoration: none; }
+  body h1,
+  body h2 {
+    font-weight: 300;
+    line-height: 1.2; }
+  body p {
+    margin: 1rem 0; }
+  body img {
+    width: 100%; }
+
+.btn-primary {
+  background: #7dcea0;
+  color: #d7dbdd; }
+
+.btn-secondary {
+  background: #f7dc6f;
+  color: #d7dbdd; }
+
+.btn-dark {
+  background: #333;
+  color: #d7dbdd; }
+
+.btn-primary {
+  background: #d7dbdd;
+  color: #333; }
+
+.bg-light {
+  background-color: #d7dbdd; }

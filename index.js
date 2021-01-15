@@ -1,16 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   var myVideo = document.getElementById("video");
-
-  function playPause() {
-    if (myVideo.paused) myVideo.play();
-    else myVideo.pause();
-  }
-
-  console.log(document);
-
-  document.addEventListener("scroll", () => {
-    myVideo.play();
-  });
+  const playBtn = document.querySelector("#play-btn");
+  const playerLogo = document.querySelector("#player-logo");
+  playerLogo.classList.add("first-load");
 
   window.addEventListener("resize", () => {
     console.log(window.innerWidth);
@@ -21,4 +13,42 @@ document.addEventListener("DOMContentLoaded", () => {
         "The Sky Is The Limit";
     }
   });
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  playBtn.addEventListener("click", () => {
+    if (
+      playerLogo.classList.contains("fa-play-circle") &&
+      playerLogo.classList.contains("first-load")
+    ) {
+      playerLogo.classList.remove("fa-play-circle");
+      playerLogo.classList.remove("first-load");
+      playerLogo.classList.add("fa-pause-circle");
+      myVideo.play();
+    } else if (
+      playerLogo.classList.contains("fa-play-circle") &&
+      playerLogo.classList.contains("first-load") === false
+    ) {
+      playerLogo.classList.remove("fa-play-circle");
+      playerLogo.classList.add("fa-pause-circle");
+      myVideo.pause();
+    } else {
+      playerLogo.classList.remove("fa-pause-circle");
+      playerLogo.classList.add("fa-play-circle");
+      myVideo.play();
+    }
+  });
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      playBtn.style.display = "block";
+    } else {
+      playBtn.style.display = "none";
+    }
+  }
 });

@@ -24,30 +24,22 @@ body {
   body img {
     width: 100%; }
 
-.btn-primary {
-  background: #7dcea0;
+.btn-primary,
+.bg-primary {
+  background: #239b56;
   color: #d7dbdd; }
 
-.btn-secondary {
+.btn-secondary,
+.bg-secondary {
   background: #f7dc6f;
   color: #d7dbdd; }
 
-.btn-dark {
+.btn-dark,
+.bg-dark {
   background: #333;
   color: #d7dbdd; }
 
-.btn-primary {
-  background: #d7dbdd;
-  color: #333; }
-
+.bg-light,
 .bg-light {
-  background-color: #d7dbdd; }
-
-.about__flex-items {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  height: 100%; }
-
-.about__flex-items > div {
-  padding: 2rem; }
+  background-color: #d7dbdd;
+  color: #333; }

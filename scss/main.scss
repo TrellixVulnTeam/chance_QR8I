@@ -14,6 +14,7 @@
   position: fixed;
   top: 0;
   padding: 0 3rem;
+  z-index: 100;
 
   ul {
     display: flex;
@@ -27,8 +28,14 @@
     cursor: pointer;
   }
 
+  h1 {
+    position: relative;
+  }
+
   &__brand a {
-    margin-left: 150%;
+    position: absolute;
+    left: 13%;
+    top: 35%;
     letter-spacing: 0.2rem;
     font-family: "Irish Grover", sans-serif;
     font-size: 2rem;
@@ -51,6 +58,8 @@
   }
 
   &__logo-container {
+    backface-visibility: hidden;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,18 +67,29 @@
     cursor: pointer;
   }
 
-  &__logo {
-    font-weight: 400;
-    margin-left: 220%;
-  }
-
   #logo {
-    animation: spin 30s linear infinite;
+    animation: dropIn ease-out 0.5s, spin 60s linear infinite;
   }
 
   @keyframes spin {
     100% {
       transform: rotate(360deg);
+    }
+  }
+
+  @keyframes dropIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+
+    80% {
+      transform: translateY(5px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }
@@ -91,6 +111,7 @@
   text-align: center;
   height: 100%;
   padding: 0 20px;
+  backface-visibility: hidden;
 
   h1 {
     font-size: 5rem;
@@ -133,32 +154,58 @@
   // ADDING THE SPLASH EFFECT
 
   .hero__btn::after {
-    /* content MUST ALWAYS BE SET */
     content: "";
-    /* SINCE THE PARENT IS inline-block ALSO */
     display: inline-block;
     height: 100%;
     width: 100%;
     border-radius: 100px;
-    /* absolute POSITIONING ON THE CHILD */
     position: absolute;
     top: 0;
     left: 0;
-    /* KEEPS THE BUTTON BEHIND BUT THE SPLASH EFFECT WILL APPEAR ON THE SIDES */
     z-index: -1;
     transition: all 0.4s;
   }
 
-  /*SET THE btn COLOR FOR THE ::after PSEUDO ELEMENT*/
   .btn-white::after {
     background-color: $secondary-color;
   }
 
   .hero__btn:hover::after {
-    /* scale() DOUBLES THE SIZE IT WAS BEFORE */
     transform: scale(1.5);
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
+  }
+  // .content__heading {
+  //   animation-name: moveInLeft;
+  //   animation-duration: 0.5s;
+  // }
+
+  .content__heading {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+  }
+
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    80% {
+      transform: translateX(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 
@@ -177,4 +224,37 @@
     border-radius: 50%;
     margin-bottom: 15px;
   }
+}
+
+.about__flex-items {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+
+  & h3 {
+    font-family: "Irish Grover", sans-serif;
+    padding: 2rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+.flex-columns__row {
+  display: flex;
+  flex-direction: row;
+  // flex-wrap: wrap;
+  width: 100%;
+}
+.flex-columns_column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.flex-columns_column-1 {
+  height: 100%;
+}
+
+video {
+  display: none;
 }

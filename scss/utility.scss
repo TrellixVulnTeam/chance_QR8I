@@ -38,37 +38,26 @@ body {
   }
 }
 
-.btn-primary {
+.btn-primary,
+.bg-primary {
   background: $primary-color;
   color: $light-color;
 }
 
-.btn-secondary {
+.btn-secondary,
+.bg-secondary {
   background: $secondary-color;
   color: $light-color;
 }
 
-.btn-dark {
+.btn-dark,
+.bg-dark {
   background: $dark-color;
   color: $light-color;
 }
 
-.btn-primary {
-  background: $light-color;
-  color: $dark-color;
-}
-
+.bg-light,
 .bg-light {
   background-color: $light-color;
-}
-
-.about__flex-items {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.about__flex-items > div {
-  padding: 2rem;
+  color: $dark-color;
 }

@@ -1,3 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("hi");
+  // const video = document.getElementById("video");
+  // video.play();
 });

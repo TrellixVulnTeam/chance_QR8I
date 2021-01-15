@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // const video = document.getElementById("video");
-  // video.play();
+  var myVideo = document.getElementById("video");
+
+  function playPause() {
+    if (myVideo.paused) myVideo.play();
+    else myVideo.pause();
+  }
+
+  playPause();
 });

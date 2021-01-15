@@ -39,6 +39,14 @@ body {
   }
 }
 
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  /* Y AXIS 15PX padding AND X AXIS 40px padding  */
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+}
 .btn-primary,
 .bg-primary {
   background: $primary-color;
@@ -48,7 +56,7 @@ body {
 .btn-secondary,
 .bg-secondary {
   background: $secondary-color;
-  color: $light-color;
+  color: $dark-color;
 }
 
 .btn-dark,

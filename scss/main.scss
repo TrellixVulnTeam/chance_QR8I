@@ -161,3 +161,20 @@
     opacity: 0;
   }
 }
+
+.icons {
+  padding: 3rem;
+
+  h3 {
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  i {
+    background-color: $primary-color;
+    color: $light-color;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+}

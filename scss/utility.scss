@@ -61,3 +61,14 @@ body {
 .bg-light {
   background-color: $light-color;
 }
+
+.about__flex-items {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.about__flex-items > div {
+  padding: 2rem;
+}

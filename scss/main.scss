@@ -208,7 +208,7 @@
 }
 
 .icons {
-  padding: 3rem;
+  padding: 0.5rem;
 
   h3 {
     font-weight: bold;
@@ -224,22 +224,32 @@
   }
 }
 
-.about__flex-items {
-  display: flex;
-  text-align: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 100%;
+.about {
+  &__flex-items {
+    height: 25rem;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5rem;
 
-  & h3 {
-    font-family: "Irish Grover", sans-serif;
-    padding: 2rem;
-    letter-spacing: 0.2rem;
+    & h3 {
+      font-family: "Irish Grover", sans-serif;
+      padding: 2rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+  &__flex-item {
+    margin: 0 2rem;
   }
 }
 
-.about__flex-item {
-  margin: 2rem;
+.casino {
+  height: 100vh;
+
+  &__row {
+    margin-bottom: 1rem;
+  }
 }
 
 video {

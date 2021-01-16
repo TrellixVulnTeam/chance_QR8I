@@ -19,9 +19,10 @@ body {
   body h1,
   body h2 {
     font-weight: 300;
-    line-height: 1.2; }
+    line-height: 1.2;
+    margin: 0.5rem 0; }
   body p {
-    margin: 1rem 0; }
+    margin: 0.85rem 0; }
   body img {
     width: 100%; }
 
@@ -48,10 +49,13 @@ body {
   background: #333;
   color: #d7dbdd; }
 
-.bg-light,
+.btn-light,
 .bg-light {
   background-color: #d7dbdd;
   color: #333; }
+
+.flex-columns.flex-reverse .flex-columns__row {
+  flex-direction: row-reverse; }
 
 .flex-columns img {
   width: 100%;
@@ -62,6 +66,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  height: 100vh;
   width: 100%; }
 
 .flex-columns__column {

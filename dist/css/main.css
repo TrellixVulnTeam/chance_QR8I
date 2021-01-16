@@ -64,23 +64,6 @@
     opacity: 1;
     transform: translateY(0); } }
 
-/* Smartphones - All widths normally under 500 */
-@media only screen and (max-width: 500px) {
-  .navbar ul {
-    display: none; }
-  .content__heading {
-    margin-top: 5rem; } }
-
-/* Tablet */
-@media (min-width: 501px) and (max-width: 768px) {
-  .navbar ul {
-    display: none; } }
-
-/* Normal */
-@media (min-width: 769px) and (max-width: 1200px) {
-  .navbar ul {
-    display: none; } }
-
 .hero {
   background: url("../../assets/home/showcase.jpg") no-repeat center center/cover;
   height: 100vh;
@@ -108,14 +91,12 @@
   .hero .content .hero__btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    /* Y AXIS 15PX padding AND X AXIS 40px padding  */
     padding: 15px 40px;
     display: inline-block;
     border-radius: 100px;
     transition: all 0.2s;
     animation-fill-mode: backwards; }
   .hero .content .hero__btn:hover {
-    /* Y AXIS WORKS FROM THE TOP TO THE BOTTOM SO TO GO UP IT HAS TO BE NEGATIVE */
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
   .hero .content .hero__btn:active {
@@ -161,7 +142,7 @@
     opacity: 1; } }
 
 .icons {
-  padding: 3rem; }
+  padding: 0.5rem; }
   .icons h3 {
     font-weight: bold;
     margin-bottom: 2rem; }
@@ -173,48 +154,24 @@
     margin-bottom: 15px; }
 
 .about__flex-items {
+  height: 25rem;
   display: flex;
   text-align: center;
   flex-wrap: wrap;
   justify-content: center;
-  height: 100%; }
+  padding: 5rem; }
   .about__flex-items h3 {
     font-family: "Irish Grover", sans-serif;
     padding: 2rem;
     letter-spacing: 0.2rem; }
 
 .about__flex-item {
-  margin: 2rem; }
+  margin: 0 2rem; }
 
-.flex-columns img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
-
-.flex-columns__row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%; }
-
-.flex-columns__column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-basis: 100%;
-  flex: 1; }
-
-.flex-columns__column-1 {
-  height: 100%;
-  width: 100%;
-  object-fit: cover; }
-
-.flex-columns__column-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 3rem; }
+.casino {
+  height: 100vh; }
+  .casino__row {
+    margin-bottom: 1rem; }
 
 video {
   display: none; }
@@ -233,3 +190,6 @@ video {
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 4px; }
+
+.casino img:hover {
+  opacity: 0.7; }

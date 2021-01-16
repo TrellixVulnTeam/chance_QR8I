@@ -94,30 +94,6 @@
   }
 }
 
-/* Smartphones - All widths normally under 500 */
-@media only screen and (max-width: 500px) {
-  .navbar ul {
-    display: none;
-  }
-  .content__heading {
-    margin-top: 5rem;
-  }
-}
-
-/* Tablet */
-@media (min-width: 501px) and (max-width: 768px) {
-  .navbar ul {
-    display: none;
-  }
-}
-
-/* Normal */
-@media (min-width: 769px) and (max-width: 1200px) {
-  .navbar ul {
-    display: none;
-  }
-}
-
 .hero {
   background: url("../../assets/home/showcase.jpg") no-repeat center
     center/cover;
@@ -152,7 +128,6 @@
   .hero__btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    /* Y AXIS 15PX padding AND X AXIS 40px padding  */
     padding: 15px 40px;
     display: inline-block;
     border-radius: 100px;
@@ -161,7 +136,6 @@
   }
 
   .hero__btn:hover {
-    /* Y AXIS WORKS FROM THE TOP TO THE BOTTOM SO TO GO UP IT HAS TO BE NEGATIVE */
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
@@ -268,39 +242,6 @@
   margin: 2rem;
 }
 
-.flex-columns img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.flex-columns__row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.flex-columns__column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-basis: 100%;
-  flex: 1;
-}
-.flex-columns__column-1 {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.flex-columns__column-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 3rem;
-}
-
 video {
   display: none;
 }
@@ -319,4 +260,8 @@ video {
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 4px;
+}
+
+.casino img:hover {
+  opacity: 0.7;
 }

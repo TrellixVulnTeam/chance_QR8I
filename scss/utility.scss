@@ -2,114 +2,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-  background: $light-color;
-  color: #333;
-  line-height: 1.6;
-  position: relative;
-
-  ul {
-    list-style: none;
+// FLEX
+.flex-columns {
+  &-flex-reverse &__row {
+    flex-direction: row-reverse;
   }
 
-  a {
-    color: #333;
-    text-decoration: none;
+  & img {
+    width: 100%;
+    height: 100%;
+    //object-fit: cover;
   }
 
-  h1,
-  h2 {
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 0.5rem 0;
-  }
-
-  p {
-    margin: 0.85rem 0;
-  }
-
-  img {
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
     width: 100%;
   }
-}
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 100%;
+    flex: 1;
+  }
+  &__column-1 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 
-.btn {
-  text-transform: uppercase;
-  text-decoration: none;
-  /* Y AXIS 15PX padding AND X AXIS 40px padding  */
-  padding: 15px 40px;
-  display: inline-block;
-  border-radius: 100px;
-}
-.btn-primary,
-.bg-primary {
-  background: $primary-color;
-  color: $light-color;
-}
-
-.btn-secondary,
-.bg-secondary {
-  background: $secondary-color;
-  color: $dark-color;
-}
-
-.btn-dark,
-.bg-dark {
-  background: $dark-color;
-  color: $light-color;
-}
-
-.btn-light,
-.bg-light {
-  background-color: $light-color;
-  color: $dark-color;
-}
-
-// FLEX
-
-.flex-columns.flex-reverse .flex-columns__row {
-  flex-direction: row-reverse;
-}
-
-.flex-columns img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.flex-columns__row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 100vh;
-  width: 100%;
-}
-.flex-columns__column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-basis: 100%;
-  flex: 1;
-}
-.flex-columns__column-1 {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.flex-columns__column-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 3rem;
+  &__column-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3rem;
+  }
 }
 
 // SECTIONS

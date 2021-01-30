@@ -1,66 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-body {
-  font-family: "Open Sans", sans-serif;
-  background: #d7dbdd;
-  color: #333;
-  line-height: 1.6;
-  position: relative; }
-  body ul {
-    list-style: none; }
-  body a {
-    color: #333;
-    text-decoration: none; }
-  body h1,
-  body h2 {
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 0.5rem 0; }
-  body p {
-    margin: 0.85rem 0; }
-  body img {
-    width: 100%; }
-
-.btn {
-  text-transform: uppercase;
-  text-decoration: none;
-  /* Y AXIS 15PX padding AND X AXIS 40px padding  */
-  padding: 15px 40px;
-  display: inline-block;
-  border-radius: 100px; }
-
-.btn-primary,
-.bg-primary {
-  background: #239b56;
-  color: #d7dbdd; }
-
-.btn-secondary,
-.bg-secondary {
-  background: #f7dc6f;
-  color: #333; }
-
-.btn-dark,
-.bg-dark {
-  background: #333;
-  color: #d7dbdd; }
-
-.btn-light,
-.bg-light {
-  background-color: #d7dbdd;
-  color: #333; }
-
-.flex-columns.flex-reverse .flex-columns__row {
+.flex-columns-flex-reverse .flex-columns__row {
   flex-direction: row-reverse; }
 
 .flex-columns img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; }
+  height: 100%; }
 
 .flex-columns__row {
   display: flex;

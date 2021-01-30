@@ -1,3 +1,4 @@
+@import "../abstracts/variables";
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 .navbar {
@@ -11,8 +12,15 @@
   height: 7rem;
   position: fixed;
   top: 0;
-  padding: 0 3rem;
+  padding: 0 1rem;
   z-index: 100;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
 
   ul {
     display: flex;
@@ -26,25 +34,33 @@
     position: relative;
   }
 
-  &__logo-container {
-    backface-visibility: hidden;
-    align-items: center;
-    justify-content: center;
-    width: 6rem;
-    margin-top: 0.5rem;
-    cursor: pointer;
-  }
-
   &__brand-heading a {
-    position: absolute;
-    left: 10rem;
-    top: 2rem;
+    //position: absolute;
+    //left: 10rem;
+    //top: 2rem;
 
     color: #fff;
     letter-spacing: 2px;
     font-family: "Abril Fatface", cursive;
-    font-size: 18px;
+    font-size: 1.5rem;
     text-decoration: none;
+  }
+
+  &__list-heading li {
+    padding: 1rem;
+  }
+
+  &__list-heading a {
+    color: #fff;
+
+    letter-spacing: 2px;
+    font-family: "Abril Fatface", cursive;
+    font-size: 1.25rem;
+    text-decoration: none;
+  }
+
+  &__list-heading ul {
+    margin-left: 25%;
   }
 
   &__list li {
@@ -159,74 +175,47 @@
   }
 }
 
-//
-
-@media only screen and (max-width: 500px) {
-  .navbar {
-    &__logo-container {
-      position: absolute;
-      //left: 0;
-      margin-left: 1rem;
-    }
-
-    &__list li {
-      padding: 0 0.35rem;
-    }
-
-    &__list a {
-      font-size: 1rem;
-    }
-
-    &__brand-heading a {
-      // position: absolute;
-      // left: 0;
-      // margin-top: 1rem;
-      // margin-left: 8rem;
-      display: none;
-    }
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-/* Tablet */
-@media (min-width: 501px) and (max-width: 768px) {
-  .navbar {
-    &__logo-container {
-      position: absolute;
-      left: 0;
-      margin-left: 1rem;
-    }
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
 
-    &__list li {
-      padding: 0 1rem;
-    }
+  80% {
+    transform: translateY(5px);
+  }
 
-    &__brand-heading a {
-      position: absolute;
-      left: 0;
-      margin-top: 1rem;
-      margin-left: 8rem;
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Normal */
-@media (min-width: 769px) and (max-width: 1200px) {
-  .navbar {
-    &__logo-container {
-      position: absolute;
-      left: 0;
-      margin-left: 1rem;
-    }
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-    &__list li {
-      padding: 0 1rem;
-    }
-
-    &__brand-heading a {
-      position: absolute;
-      left: 0;
-      margin-top: 1rem;
-      margin-left: 8rem;
-    }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
